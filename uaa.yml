@@ -1,0 +1,93 @@
+issuer:
+  uri: http://localhost:8181/uaa
+
+encryption:
+  active_key_label: CHANGE-THIS-KEY
+  encryption_keys:
+  - label: CHANGE-THIS-KEY
+    passphrase: CHANGEME
+
+login:
+  serviceProviderKey: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICXQIBAAKBgQDHtC5gUXxBKpEqZTLkNvFwNGnNIkggNOwOQVNbpO0WVHIivig5
+    L39WqS9u0hnA+O7MCA/KlrAR4bXaeVVhwfUPYBKIpaaTWFQR5cTR1UFZJL/OF9vA
+    fpOwznoD66DDCnQVpbCjtDYWX+x6imxn8HCYxhMol6ZnTbSsFW6VZjFMjQIDAQAB
+    AoGAVOj2Yvuigi6wJD99AO2fgF64sYCm/BKkX3dFEw0vxTPIh58kiRP554Xt5ges
+    7ZCqL9QpqrChUikO4kJ+nB8Uq2AvaZHbpCEUmbip06IlgdA440o0r0CPo1mgNxGu
+    lhiWRN43Lruzfh9qKPhleg2dvyFGQxy5Gk6KW/t8IS4x4r0CQQD/dceBA+Ndj3Xp
+    ubHfxqNz4GTOxndc/AXAowPGpge2zpgIc7f50t8OHhG6XhsfJ0wyQEEvodDhZPYX
+    kKBnXNHzAkEAyCA76vAwuxqAd3MObhiebniAU3SnPf2u4fdL1EOm92dyFs1JxyyL
+    gu/DsjPjx6tRtn4YAalxCzmAMXFSb1qHfwJBAM3qx3z0gGKbUEWtPHcP7BNsrnWK
+    vw6By7VC8bk/ffpaP2yYspS66Le9fzbFwoDzMVVUO/dELVZyBnhqSRHoXQcCQQCe
+    A2WL8S5o7Vn19rC0GVgu3ZJlUrwiZEVLQdlrticFPXaFrn3Md82ICww3jmURaKHS
+    N+l4lnMda79eSp3OMmq9AkA0p79BvYsLshUJJnvbk76pCjR28PK4dV1gSDUEqQMB
+    qy45ptdwJLqLJCeNoR0JUcDNIRhOCuOPND7pcMtX6hI/
+    -----END RSA PRIVATE KEY-----
+  serviceProviderKeyPassword: password
+  serviceProviderCertificate: |
+    -----BEGIN CERTIFICATE-----
+    MIIDSTCCArKgAwIBAgIBADANBgkqhkiG9w0BAQQFADB8MQswCQYDVQQGEwJhdzEO
+    MAwGA1UECBMFYXJ1YmExDjAMBgNVBAoTBWFydWJhMQ4wDAYDVQQHEwVhcnViYTEO
+    MAwGA1UECxMFYXJ1YmExDjAMBgNVBAMTBWFydWJhMR0wGwYJKoZIhvcNAQkBFg5h
+    cnViYUBhcnViYS5hcjAeFw0xNTExMjAyMjI2MjdaFw0xNjExMTkyMjI2MjdaMHwx
+    CzAJBgNVBAYTAmF3MQ4wDAYDVQQIEwVhcnViYTEOMAwGA1UEChMFYXJ1YmExDjAM
+    BgNVBAcTBWFydWJhMQ4wDAYDVQQLEwVhcnViYTEOMAwGA1UEAxMFYXJ1YmExHTAb
+    BgkqhkiG9w0BCQEWDmFydWJhQGFydWJhLmFyMIGfMA0GCSqGSIb3DQEBAQUAA4GN
+    ADCBiQKBgQDHtC5gUXxBKpEqZTLkNvFwNGnNIkggNOwOQVNbpO0WVHIivig5L39W
+    qS9u0hnA+O7MCA/KlrAR4bXaeVVhwfUPYBKIpaaTWFQR5cTR1UFZJL/OF9vAfpOw
+    znoD66DDCnQVpbCjtDYWX+x6imxn8HCYxhMol6ZnTbSsFW6VZjFMjQIDAQABo4Ha
+    MIHXMB0GA1UdDgQWBBTx0lDzjH/iOBnOSQaSEWQLx1syGDCBpwYDVR0jBIGfMIGc
+    gBTx0lDzjH/iOBnOSQaSEWQLx1syGKGBgKR+MHwxCzAJBgNVBAYTAmF3MQ4wDAYD
+    VQQIEwVhcnViYTEOMAwGA1UEChMFYXJ1YmExDjAMBgNVBAcTBWFydWJhMQ4wDAYD
+    VQQLEwVhcnViYTEOMAwGA1UEAxMFYXJ1YmExHTAbBgkqhkiG9w0BCQEWDmFydWJh
+    QGFydWJhLmFyggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEAYvBJ
+    0HOZbbHClXmGUjGs+GS+xC1FO/am2suCSYqNB9dyMXfOWiJ1+TLJk+o/YZt8vuxC
+    KdcZYgl4l/L6PxJ982SRhc83ZW2dkAZI4M0/Ud3oePe84k8jm3A7EvH5wi5hvCkK
+    RpuRBwn3Ei+jCRouxTbzKPsuCVB+1sNyxMTXzf0=
+    -----END CERTIFICATE-----
+
+#The secret that an external login server will use to authenticate to the uaa using the id `login`
+LOGIN_SECRET: loginsecret
+
+jwt:
+  token:
+    signing-key: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEowIBAAKCAQEAxplkvH119PCmLTUPpNdlmgm5Q11cyiMTaq5sdL3XWEmR81MF
+        Py7QZyfClt0HF+cdIvXXcKu87sAo1EpJx5KNn1dzqoP49E3aBaumOrEUVhw7oxrK
+        qSc3z9iAOh9IVrmypOJrXhXFddLSBfx3zjy3O8BCIyRxMWBe7XcLI0FLfrryEzUw
+        OKAN8vd6D2n9mLXbUlZtv0PudclolauOaF5fbh5rBYey/P5oY7476r2eiDI61JtM
+        Yd2poGN9CiNXvOMtRl9I1ZG1dwjeO1an3CzO4kSomRzCVr/WpZdeOcaXF+/mNoMs
+        2soYqVXfqN3rTSqR2IIOEGXL6r8QUVUckgz6TwIDAQABAoIBABqgqHwJSk58EZvQ
+        GHfelXXQxfE9TFqh11Gfb1U7uurQemwofnSZP0IFd7aojfHrf+GXGrq1nBBa3V6R
+        U1EZ2jk6DX0YUsHWylumRxRpd7OP94MH7ZI+euI4QgEI/rb6EPTAkuq7eo0wpg49
+        aobRZzPwtC1oDnEzXabzJiAk+g1UoNjj4M9vIP2E2nS/w58poRXZYemsL4VjSNK8
+        kOVHistycqWyz8ASvHb7ovkp0Yztc6egjQm9xskLfIOkQtJAp6JNLWVcq666hMwJ
+        ZGekmldXLmy8ev4OZIIbFUEds5g0sI3U8vyQJB1gxeUS5eaEojHsam0T9uz+SH9+
+        T6k35kECgYEA8B8tdJ4AkIV9VnaIoZqFWcsNK+n/fgEeC+yhVLUuE+r9pvwyvvpk
+        JdDXon1JbZnAk2aZfFqIy+5ajXnlzFdV1oUTvVoA3igBjrFRLoPWLleEGLjOecfM
+        XPa0KFexL4UviHcH8otu7VryP8OM95Ds/shXeEwhdLU9XLs235NEYu8CgYEA07tQ
+        fTCirqyda8YIEUutr/Q7xmuJkYkCswq2+KX6bJReQ8jYVY3RzYWVZ39vgkfiluEb
+        /BIWW7vuumPns9HUQRSnHyWeYxTt+l1LlihTTmpAq7sL1jidsEQBymb2/0bDBj5Y
+        VKHUo1Ks1IuW9jMXateSB4yrAjKHZb87Tze5XqECgYAGj+OPH05GpM9DEKQ1PmLM
+        jGcEvzVTPTaT/th91yG2O6LI8HV2kKMyAV4TO7dI/n2ryY8CPfslD5N78EveZLic
+        zzA16YLCj3dTbfcY/VNaGtwqTMqfu10TYU6VF6ho8wvUf+RAtZzHccfTBEYS8ev4
+        HoN9bx8u8FEH+rnKLF0fEwKBgQDIuK3gUKgY8dk234CsbNMWmHHGdBHxnzKo60J0
+        TF0wbCNFHXVA/fZkYPw3Js9ecal0oal2+OqrQmlZ1/ZDOWt/2wVn+LDDe4bzr1hF
+        3KrFDuOKKgNZrUiIXqBX8e68KKggFiCE8vnzbyAbSs3tTpgnmH9+mrNPnPlQ0s52
+        FfysoQKBgEPKoPfvyQ07644MKYQ5ADhD02HV+64GyKTQMt5eQqpIVX6RB6aNoc4L
+        J8iMlqzb/+bI45MOcXsoouZTYFYpK6vvT1/nYTAllluUhCtMTaCDXV/Vp80eG4+e
+        0pWyJtTvB/2cmZemCV8vpbTI+41XBphUA+bdnpEhjnJinl7GxeDP
+        -----END RSA PRIVATE KEY-----
+        
+    verification-key: |
+        -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxplkvH119PCmLTUPpNdl
+        mgm5Q11cyiMTaq5sdL3XWEmR81MFPy7QZyfClt0HF+cdIvXXcKu87sAo1EpJx5KN
+        n1dzqoP49E3aBaumOrEUVhw7oxrKqSc3z9iAOh9IVrmypOJrXhXFddLSBfx3zjy3
+        O8BCIyRxMWBe7XcLI0FLfrryEzUwOKAN8vd6D2n9mLXbUlZtv0PudclolauOaF5f
+        bh5rBYey/P5oY7476r2eiDI61JtMYd2poGN9CiNXvOMtRl9I1ZG1dwjeO1an3CzO
+        4kSomRzCVr/WpZdeOcaXF+/mNoMs2soYqVXfqN3rTSqR2IIOEGXL6r8QUVUckgz6
+        TwIDAQAB
+        -----END PUBLIC KEY-----
